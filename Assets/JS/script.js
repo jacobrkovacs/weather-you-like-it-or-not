@@ -1,4 +1,5 @@
 let searchBtnEl = $('#search')
+let previousSearches = $('#previousSearches')
 
 searchBtnEl.on('click', getWeatherApi)
 
@@ -27,7 +28,9 @@ function getWeatherApi() {
                     return response.json();
                 })
                 .then(function(data) {
+                    
                     for(let i = 0; i < data.list.length; i += 8){
+                        console.log(data.city.name)
                         console.log(data.list[i].main.temp);
                     }
                 })
