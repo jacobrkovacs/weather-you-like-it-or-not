@@ -22,7 +22,7 @@ function getWeatherApi() {
     previousSearches.append(newListItem)
 
     let getCoordinates =
-    'http://api.openweathermap.org/geo/1.0/direct?q=' +
+    'https://api.openweathermap.org/geo/1.0/direct?q=' +
     cityName +
     '&appid=31f06f1bb77ed8f63489dacc79716341'
 
@@ -75,7 +75,7 @@ previousSearches.children('li').on('click', function() {
     let cityName = this.textContent
 
     let getCoordinates =
-    'http://api.openweathermap.org/geo/1.0/direct?q=' +
+    'https://api.openweathermap.org/geo/1.0/direct?q=' +
     cityName +
     '&appid=31f06f1bb77ed8f63489dacc79716341'
 
